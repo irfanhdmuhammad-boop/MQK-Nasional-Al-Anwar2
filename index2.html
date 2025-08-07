@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQK PP Al-Anwar 2 | Maulidiyah ke-13</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #2d3748;
+            min-height: 100vh;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .countdown-timer {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <div class="max-w-6xl mx-auto p-6 md:p-10 bg-white shadow-2xl rounded-3xl my-8">
+
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <svg class="w-20 h-20 mx-auto mb-4 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text mb-4">
+                Musabaqah Qiroatil Kutub (MQK) Nasional
+            </h1>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-600 mb-4 text-center">
+                dalam rangka Harlah Yayasan Pondok Pesantren Al Anwar 2 Sarang
+            </h2>
+            <div class="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-full text-lg font-semibold pulse-animation">
+                Pendaftaran GRATIS!!!
+            </div>
+        </header>
+
+        <!-- Countdown Timer -->
+        <section class="mb-12">
+            <div class="countdown-timer rounded-2xl p-8 text-white text-center card-hover">
+                <h3 class="text-2xl font-bold mb-4">⏰ Waktu Pendaftaran Tersisa</h3>
+                <div class="flex justify-center space-x-4 text-center">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold" id="days">30</div>
+                        <div class="text-sm">Hari</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold" id="hours">12</div>
+                        <div class="text-sm">Jam</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold" id="minutes">45</div>
+                        <div class="text-sm">Menit</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold" id="seconds">30</div>
+                        <div class="text-sm">Detik</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 card-hover">
+                <h3 class="text-2xl font-bold text-green-800 mb-4 text-center">Selamat Datang</h3>
+                <div class="text-center mb-6">
+                    <div class="inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-lg font-bold mb-4">
+                        💰 Total Hadiah Puluhan Juta Rupiah
+                    </div>
+                    <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-base font-semibold">
+                        ⚡ Kuota Terbatas - Segera Daftarkan Diri!
+                    </div>
+                </div>
+                <p class="text-lg leading-relaxed text-gray-700 text-center">
+                    Selamat datang di laman resmi <strong class="font-bold text-green-700">Musabaqah Qiroatil Kutub (MQK) Nasional Pondok Pesantren Al-Anwar 2</strong>, sebuah acara yang diselenggarakan dalam rangka Harlah Yayasan. Kami mengajak seluruh santri dan generasi muda untuk turut serta dalam festival ilmu ini, mengasah kemampuan membaca dan memahami kitab-kitab klasik, serta melestarikan tradisi keilmuan pesantren.
+                </p>
+            </div>
+        </section>
+
+        <!-- Event Details -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 gradient-text">📋 Detail Acara</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 rounded-2xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                        <h4 class="text-xl font-bold text-blue-800">Tanggal & Waktu</h4>
+                    </div>
+                    <p class="text-gray-700 mb-2"><strong>Pendaftaran:</strong> 1 - 30 Januari 2024</p>
+                    <p class="text-gray-700 mb-2"><strong>Pelaksanaan:</strong> 15 Februari 2024</p>
+                    <p class="text-gray-700"><strong>Waktu:</strong> 08.00 - 17.00 WIB</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-2xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <h4 class="text-xl font-bold text-purple-800">Lokasi</h4>
+                    </div>
+                    <p class="text-gray-700 mb-2"><strong>Tempat:</strong> Pondok Pesantren Al-Anwar 2</p>
+                    <p class="text-gray-700 mb-2"><strong>Alamat:</strong> Sarang, Rembang, Jawa Tengah</p>
+                    <p class="text-gray-700"><strong>Aula:</strong> Gedung Utama PP Al-Anwar 2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 gradient-text">🏆 Kategori Lomba</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 card-hover text-center">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h4 class="text-xl font-bold text-red-800 mb-3">Kategori Pemula</h4>
+                    <p class="text-gray-700 mb-4">Untuk santri tingkat dasar dan menengah</p>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        Hadiah: Rp 5.000.000
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 card-hover text-center">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h4 class="text-xl font-bold text-yellow-800 mb-3">Kategori Menengah</h4>
+                    <p class="text-gray-700 mb-4">Untuk santri tingkat lanjut</p>
+                    <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        Hadiah: Rp 10.000.000
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 card-hover text-center">
+                    <div class="text-4xl mb-4">👑</div>
+                    <h4 class="text-xl font-bold text-green-800 mb-3">Kategori Mahir</h4>
+                    <p class="text-gray-700 mb-4">Untuk santri senior dan alumni</p>
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        Hadiah: Rp 15.000.000
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8">
+                <h3 class="text-3xl font-bold text-center mb-8 text-indigo-800">📝 Formulir Pendaftaran</h3>
+                <form class="max-w-2xl mx-auto space-y-6" id="registrationForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Asal Pesantren/Lembaga *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nama pesantren/lembaga">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nomor WhatsApp *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="08xxxxxxxxxx">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Kategori Lomba *</label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <option value="">Pilih kategori</option>
+                                <option value="pemula">Pemula</option>
+                                <option value="menengah">Menengah</option>
+                                <option value="mahir">Mahir</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Catatan Tambahan</label>
+                        <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Pesan atau pertanyaan (opsional)"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            🚀 Daftar Sekarang
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 gradient-text">📞 Informasi Kontak</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-green-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h4 class="text-lg font-bold text-green-800 mb-2">WhatsApp</h4>
+                    <p class="text-gray-700">+62 812-3456-7890</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl mb-4">✉️</div>
+                    <h4 class="text-lg font-bold text-blue-800 mb-2">Email</h4>
+                    <p class="text-gray-700">mqk@alanwar2.ac.id</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h4 class="text-lg font-bold text-purple-800 mb-2">Website</h4>
+                    <p class="text-gray-700">www.alanwar2.ac.id</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-8 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8 text-center">
+            <svg class="w-32 h-32 mx-auto mb-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+            </svg>
+            <p class="text-gray-600 font-medium mb-4">Ilustrasi Kitab</p>
+            <p class="text-lg text-gray-700 font-semibold">
+                "Barangsiapa menempuh jalan untuk mencari ilmu, maka Allah akan memudahkan baginya jalan menuju surga"
+            </p>
+            <p class="text-sm text-gray-500 mt-2">- HR. Muslim</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <div class="border-t border-gray-200 pt-8">
+                <p class="text-lg font-semibold mb-2">Pondok Pesantren Al-Anwar 2 Sarang</p>
+                <p class="text-sm">Jl. Raya Sarang-Blora KM. 1, Sarang, Rembang, Jawa Tengah 59274</p>
+                <p class="text-sm mt-4">© 2024 PP Al-Anwar 2. Semua hak dilindungi.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('2024-01-30T23:59:59').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create success message
+            const successDiv = document.createElement('div');
+            successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            successDiv.innerHTML = `
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    <span>Pendaftaran berhasil dikirim! Kami akan menghubungi Anda segera.</span>
+                </div>
+            `;
+            
+            document.body.appendChild(successDiv);
+            
+            // Animate in
+            setTimeout(() => {
+                successDiv.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                successDiv.classList.add('translate-x-full');
+                setTimeout(() => {
+                    document.body.removeChild(successDiv);
+                }, 300);
+            }, 5000);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b69bbdc0cf3e36',t:'MTc1NDU2Nzk3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
