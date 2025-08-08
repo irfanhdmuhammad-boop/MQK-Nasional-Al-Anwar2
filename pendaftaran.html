@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Lomba - Al Anwar 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <header class="bg-white shadow-md py-6">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-extrabold text-blue-900 mb-2">Pendaftaran Musabaqoh Nasional 2025</h1>
+            <p class="text-lg text-gray-600">Pondok Pesantren Al-Anwar 2 </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="bg-blue-600 text-white rounded-2xl shadow-xl p-10 mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Selamat Datang di Halaman Pendaftaran!</h2>
+            <p class="text-lg mb-6">Pilih salah satu cabang lomba di bawah ini untuk memulai proses pendaftaran. Pastikan Anda telah membaca semua persyaratan yang tertera di setiap kategori dan hubugi panitia untuk ketersedian Kuota.</p>
+            <a href="#daftar-lomba" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg hover:bg-gray-200 transition duration-300 ease-in-out">Lihat Kategori Lomba</a>
+        </div>
+
+        <div id="daftar-lomba" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                <h3 class="text-2xl font-bold text-purple-800 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                    </svg>
+                    MTQ (Musabaqoh Tilawatul Qur'an)
+                </h3>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-purple-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-purple-600 font-medium">Peserta Maksimal Berumur 19 Tahun</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-700 font-semibold">Peserta Bukan Santri Aktif PP Al Anwar 2</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-600 text-sm">Surat dan ayat akan ditentukan saat Technical Meeting</p>
+                    </div>
+                </div>
+                <button onclick="openModal('mtq')" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300 ease-in-out shadow-lg">Daftar Lomba MTQ</button>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    MQK (Tingkat SMA/MA/SMK)
+                </h3>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-blue-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-blue-600 font-medium">Usia maksimal: 19 tahun per 3 September 2025</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-700 font-semibold">Kitab: Fathul Qorib</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-600 text-sm">Materi: Dari Kitab Thaharah hingga Kitab Haji (Bab Ubudiyah)</p>
+                    </div>
+                </div>
+                <button onclick="openModal('mqk-sma')" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg">Daftar Lomba MQK</button>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                <h3 class="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    MQK (Tingkat SMP/MTs/Santri)
+                </h3>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-green-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-green-600 font-medium">Usia maksimal: 16 tahun ke bawah</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-700 font-semibold">Kitab: Safinatun Naja</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-4 shadow-sm">
+                        <p class="text-gray-600 text-sm">Materi: Seluruh isi kitab</p>
+                    </div>
+                </div>
+                <button onclick="openModal('mqk-smp')" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-full hover:bg-green-700 transition duration-300 ease-in-out shadow-lg">Daftar Lomba MQK</button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Modal untuk pendaftaran -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800">Pendaftaran Lomba</h2>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            
+            <form id="registrationForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap *</label>
+                    <input type="text" id="namaLengkap" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Tanggal Lahir *</label>
+                    <input type="date" id="tanggalLahir" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Asal Sekolah/Institusi *</label>
+                    <input type="text" id="asalSekolah" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Nomor WhatsApp *</label>
+                    <input type="tel" id="nomorWA" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div id="teamSection" style="display: none;">
+                    <label class="block text-gray-700 font-semibold mb-2">Nama Tim</label>
+                    <input type="text" id="namaTim" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    
+                    <label class="block text-gray-700 font-semibold mb-2 mt-4">Anggota Tim (pisahkan dengan koma)</label>
+                    <textarea id="anggotaTim" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nama Anggota 1, Nama Anggota 2, dst..."></textarea>
+                </div>
+                
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <p class="text-sm text-yellow-800">
+                        <strong>Catatan:</strong> Ini adalah halaman demo. Data yang dimasukkan tidak akan tersimpan secara permanen.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="button" onclick="closeModal()" class="flex-1 bg-gray-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">Batal</button>
+                    <button type="submit" class="flex-1 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Daftar Sekarang</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-xl font-bold mb-4">Kontak Panitia</h3>
+            <p class="mb-2">📧 Email: lomba@alanwar2.ac.id</p>
+            <p class="mb-2">📱 WhatsApp: +62 812-3456-7890</p>
+            <p class="text-gray-400 mt-4">© 2025 Al Anwar 2 Islamic Competition. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(lombaType) {
+            const modal = document.getElementById('registrationModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const teamSection = document.getElementById('teamSection');
+            
+            const lombaNames = {
+                'mtq': 'MTQ (Musabaqoh Tilawatul Qur\'an)',
+                'mqk-sma': 'MQK (Tingkat SMA/MA/SMK)',
+                'mqk-smp': 'MQK (Tingkat SMP/MTs/Santri)'
+            };
+            
+            modalTitle.textContent = `Pendaftaran ${lombaNames[lombaType]}`;
+            
+            // Hide team section for all competitions
+            teamSection.style.display = 'none';
+            document.getElementById('namaTim').required = false;
+            document.getElementById('anggotaTim').required = false;
+            
+            modal.classList.add('show');
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('registrationModal');
+            modal.classList.remove('show');
+            document.getElementById('registrationForm').reset();
+        }
+        
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Collect form data
+            data.namaLengkap = document.getElementById('namaLengkap').value;
+            data.tanggalLahir = document.getElementById('tanggalLahir').value;
+            data.asalSekolah = document.getElementById('asalSekolah').value;
+            data.nomorWA = document.getElementById('nomorWA').value;
+            
+            if (document.getElementById('teamSection').style.display !== 'none') {
+                data.namaTim = document.getElementById('namaTim').value;
+                data.anggotaTim = document.getElementById('anggotaTim').value;
+            }
+            
+            // Show success message
+            alert('Pendaftaran berhasil! Data Anda telah tercatat. Panitia akan menghubungi Anda melalui WhatsApp untuk konfirmasi pembayaran.');
+            
+            closeModal();
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('registrationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bfd78f73605fdb',t:'MTc1NDY2NDc5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
